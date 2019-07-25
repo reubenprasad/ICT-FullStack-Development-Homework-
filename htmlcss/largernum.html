@@ -9,15 +9,17 @@
 <script>
 function compare()
 {
-    var x = document.getElementById("n1").value;
-    var y = document.getElementById("n2").value;
-    if(x > y)
+    var x = (document.getElementById("n1").value);
+    var y = (document.getElementById("n2").value);
+    var n1 = parseInt(x);
+    var n2 = parseInt(y);
+    if(n1 > n2)
     {
-        document.getElementById("dp").innerHTML = x + " is the larger number";
+        document.getElementById("dp").innerHTML = n1 + " is the larger number";
     }
     else
     {
-        document.getElementById("dp").innerHTML = y + " is the larger number";
+        document.getElementById("dp").innerHTML = n2 + " is the larger number";
     }
 }
 </script>
