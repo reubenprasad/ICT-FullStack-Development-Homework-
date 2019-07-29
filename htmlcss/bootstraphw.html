@@ -13,13 +13,26 @@
     }
     </style>
     <script>
+    var regexUn = /^[a-zA-Z ]{1,32}$/;
+    var regexPw = /^[a-zA-Z0-9]{1,32}$/;
     function signIn()
     {
         document.getElementById("dtab1").style.visibility = "visible";
         var xun1 = document.getElementById("un1").value;
+        if(xun1.length!=0 && regex.test(xun1))
         document.getElementById("dun1").innerHTML = xun1;
+        else
+        {
+            alert("Please enter the username correctly");
+            
+        }
         var xpw1 = document.getElementById("pw1").value;
+        if(xpw1.length!=0 && regex.test(xpw1))
         document.getElementById("dpw1").innerHTML = xpw1;
+        else
+        {
+            alert("Please enter the password correctly");
+        }
     }
 
     function register()
